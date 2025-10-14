@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="style.css">
+
+  
+   <script src="1.js" defer></script>
+<title>Document</title>
+
+    <style>
+        
+   
+  
+       .box{
+        width: 100%;
+            height: 2rem;
+          
+            background-size: cover;
+            background-position: center;
+   
+          
+       }
+       .logo{
+           position: absolute;
+           top: 10px;
+        
+           left: 50px;
+       }
+       .name h1{
+         
+           margin: 40px 60px;
+           font-size: 20px;
+       }
+       Copy code
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: auto; 
+ 
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right; 
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:black;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav ul li a::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: orangered;
+  transition: height 0.5s;
+}
+
+nav ul li a:hover::before {
+    height: 85px;
+
+
+}
+
+.img {
+  text-align: center; 
+}
+
+.tex {
+  text-align: center; 
+}
+@media screen and (max-width: 768px) {
+  .tex h1 {
+    font-size: 20px; 
+    bottom: -100px; 
+  }
+
+}
+@media screen and (width< 1200px)
+{
+    .containeer{
+        gap: 3rem;
+    }
+}
+@media(width <900px){
+    .containeer{
+        grid-template-columns: repeat(1,1fr);
+    }
+  .containeer_right{
+    grid-template-columns: repeat(2,1fr);
+  }  
+  
+}
+@media(width <750px){
+    .containeer_righ{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+   
+
+   body{
+    min-height: 100vh;
+ 
+}
+
+    
+        footer{
+            background-color: #000000;
+            color: white;
+        }
+       
+        .c2{
+            width: 100%;
+            padding: 0%;
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+           padding: 2px;
+            
+        }
+       .co1 header.ti{
+        font-family: cursive;
+        padding: 90px 110px 10px 20px ;
+       }
+     .co1 .co2 .box1{
+        position: relative;
+        padding: 10px;
+
+     }
+     .box1 #email{
+        border-radius: 12px;
+        height: 30px;
+        width: 200px;
+     }
+     .box1 button{
+        width: 120px;
+        padding: 2px;
+        margin: 12px;
+        font-family: cursive;
+        font-weight: bold;
+        border-radius: 10px;
+     }
+     .c2{
+        background-color:#4a5c6a;
+}
+.card{
+    font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containeer{
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+.containeer_left{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.containeer_right{
+    display: grid;
+    gap: 2rem;
+}
+.card{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #5f6467;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.card img{
+    max-width: 75px;
+    border-radius: 100%;
+}
+.card_content{
+    display: flex;
+    gap: 1rem;
+}
+.card_content span i{
+    font-size: 2rem;
+    color: wheat;
+}
+.card_details p{
+ font-style: italic;
+ color:white;
+ margin-top:4rem;
+ font-size: 25px;
+ 
+}
+.card_details h4
+{
+text-align: right;
+font-size: 1rem;
+font-weight: 500;
+}       
+span{
+    color: rgb(255, 81, 0);
+}
+.name H1{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.ri-double-quotes-l {
+    margin: -20px ;
+    margin-top: 20px;
+ color: aliceblue;
+}
+#image{
+            margin-top: 10px;
+            background-color: rgb(245, 242, 239);
+            width: 60px;;
+            padding: 20px;
+            font-weight: 400;
+            padding-bottom: 0px;
+            height: 40px;
+            user-select: none;
+            text-decoration:line-through;
+            font-style: italic;
+            font-size: x-large;
+            
+            margin-left: 10px;
+             
+        }
+        #user-input{
+           
+            width:auto;
+               margin-right: 10px;
+            padding: 10px;
+            padding-bottom: 0px;
+            height: 40px;
+               
+        }
+        input{
+            border:1px black solid;
+        }
+        .inline{
+            display:inline-block;
+        }
+        #btn{
+           
+          
+            margin: 10px;
+            
+        }
+
+
+        ul li{
+    list-style: none;
+}
+         form{
+            background-color: rgb(206, 201, 201);
+            height: 300px;
+            width: 300px;
+            padding: 33px;
+            box-shadow: 7px 7px 7px 7px gray;
+         }
+         #name{
+            height: 33px;
+            width: 200px;
+            border-radius: 7px;
+         }
+         #submit{
+            height: 33px;
+            width: 200px;
+            border-radius: 7px;
+         }
+         #btn{
+            height: 33px;
+            width: 100px;
+            border-radius: 7px;
+            font-weight: bold;
+         }
+         .row{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 33px;
+         }
+         .row{
+            margin-left: 500px;
+            margin-top: 8%;
+         }
+     
+     @media(max-width:768px){
+        body{
+            width: 390px;
+
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr ;
+           padding: 2px;
+
+}}
+body{
+    background-color: white;
+}
+footer{
+    background-color: rgb(226, 226, 226);
+    padding: 23px;
+    position: relative;
+   
+}
+#email1{
+    height: 30px;
+    width: 240px;
+    border-radius: 3px;
+}
+.f{
+    margin-top: 33px;
+}
+#b1{
+    height: 30px;
+    width: 100px;
+    border-radius: 3px;
+    background-color: orangered;
+    color: white;
+}
+.col{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+@media(max-width:768px){
+    .col{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 52px;
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+}
+.f2{
+    margin: 22px;
+    padding: 12px;
+   
+}
+.f2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.f2 ul li{
+    padding: 2px;
+}
+.social{
+    color: black; 
+     display: inline-block; 
+     position: absolute;
+     font-size: 30px;
+top: 210px;
+      
+}
+.social a{
+   color: black;
+}
+.p1 p{
+    font-size: 15px;
+}
+
+    </style>
+</style>
+</head>
+
+<body>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+              <h1>MY REVIEWS</h1>
+            </div>
+            
+                <ul>
+                    <li ><a href="gallary.html">HOME</a></li>
+                    <li ><a href="hotel.html">HOTEL</a></li>
+                   <li ><a href="resturant.html">RESTURANT</a></li>
+                    <li ><a href="hospital.html">HOSPITAL</a></li>
+                    <li ><a href="cafe.html">CAFE</a></li>
+                     
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+   <div class="container">
+
+    <h3 class="title"> </h3>
+ 
+    <div class="products-container">
+ 
+       <div class="product" data-name="p-1">
+         <img src="https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2020/08/Capture-30.jpg" height="200px" width="250px">
+         <h3>Spice Villa</h3>
+         <div class="price">Surat - Dumas Rd, Behind Iscon Mall,Piplod, Surat,Gujarat 395007</div>
+       </div>
+ 
+       <div class="product" data-name="p-2">
+         <img src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/1/w/l/p118298-167738640963fae2a94402c.jpg?w=400"  height="200px" width="250px">
+         <h3>Vintage Asia </h3>
+         <div class="price">
+            Surat Marriott Hotel,Near Ambikaniketan Surat Dumas Road,Surat 395007 India</div>
+       </div>
+ 
+       <div class="product" data-name="p-3">
+         <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/96/54/05/dinning-table.jpg" height="200px" width="250px">
+     <h3>Black Pepper </h3>
+     <div class="price">
+        Dumas Road 8/9, International Bussiness Center, Surat 395007 India</div>
+       </div>
+ 
+       <div class="product" data-name="p-4">
+         <img src="https://media-cdn.tripadvisor.com/media/photo-s/24/3b/b3/5e/ambiance.jpg" height="200px" width="250px">
+         <h3>Leonardo Italian Mediterranean Dining</h3>
+         <div class="price">Bhind Iscon Mall, Inside spiceVilla Restaurant , Surat.- 395007</div>
+       </div>
+ 
+       <div class="product" data-name="p-5">
+         <img src="https://gumlet.assettype.com/freepressjournal/2021-03/446d84db-70b8-421b-a2f0-0c905002a951/barbeque_nation.jpg?w=1200&auto=format,compress&ogImage=true" height="200px" width="250px">
+         <h3>Barbeque Nation</h3>
+         <div class="price">Golden Square, Near Sargam Shopping Center Parle Point, Surat. -395007
+        </div>
+       </div>
+ 
+       <div class="product" data-name="p-6">
+         <img src="https://10619-2.s.cdn12.com/rests/small/w550/h367/107_514648104.jpg" height="200px" width="250px">
+     <h3>Mad Over Grills</h3>
+     <div class="price">Raj Mandir Farm, Uttran, Opp. Maharaja Farm, Near D-Mart, Mota Varachha, Surat, Gujarat. -394105</div>
+       </div>
+ 
+    </div>
+ 
+ </div>
+ 
+ <div class="products-preview">
+ 
+    <div class="preview" data-target="p-1">
+       <i class="fas fa-times"></i>
+       <img src="https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2020/08/Capture-30.jpg" height="200px" width="250px">
+       <h3>Spice Villa</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p></p>
+       <div class="price">Surat - Dumas Rd, Behind Iscon Mall,Piplod, Surat,Gujarat 395007</div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-2">
+       <i class="fas fa-times"></i>
+       <img src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/1/w/l/p118298-167738640963fae2a94402c.jpg?w=400"  height="200px" width="250px">
+       <h3>Vintage Asia</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p></p>
+       <div class="price">Surat Marriott Hotel,Near Ambikaniketan Surat Dumas Road,Surat 395007 India</div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-3">
+       <i class="fas fa-times"></i>
+       <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/96/54/05/dinning-table.jpg" height="200px" width="250px">
+       <h3>Black Pepper</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>
+       </p>
+       <div class="price"> Dumas Road 8/9, International Bussiness Center, Surat. -395007 </div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-4">
+       <i class="fas fa-times"></i>
+       <img src="https://media-cdn.tripadvisor.com/media/photo-s/24/3b/b3/5e/ambiance.jpg" height="200px" width="250px">
+       <h3>Leonardo Italian Mediterranean Dining</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p> </p>
+       <div class="price">Bhind Iscon Mall, Inside spiceVilla Restaurant , Surat. -395007</div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-5">
+       <i class="fas fa-times"></i>
+       <img src="https://gumlet.assettype.com/freepressjournal/2021-03/446d84db-70b8-421b-a2f0-0c905002a951/barbeque_nation.jpg?w=1200&auto=format,compress&ogImage=true" height="200px" width="250px">
+       <h3>Barbeque Nation</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p></p>
+       <div class="price">Raj Mandir Farm, Uttran, Opp. Maharaja Farm, Near D-Mart, Mota Varachha, Surat, Gujarat- 394105</div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-6">
+       <i class="fas fa-times"></i>
+       <img src="https://10619-2.s.cdn12.com/rests/small/w550/h367/107_514648104.jpg" height="200px" width="250px">
+       <h3>Mad Over Grills</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p></p>
+       <div class="price">Raj Mandir Farm, Uttran, Opp. Maharaja Farm, Near D-Mart, Mota Varachha, Surat, Gujarat- 394105</div>
+       <div class="buttons">
+          <a href="#" class="buy">READ REVIEW</a>
+          <a href="REVIEW.HTML" class="cart">WRITE REVIEW</a>
+       </div>
+    </div>
+ 
+ </div>
+ 
+</h1>
+<footer>
+    <section class="col">
+        <div class="f">
+            <input type="text" name="email" id="email1" placeholder="Enter E-mail ">
+            <button id="b1">SUBSCRIBE</button>
+        </div>
+        <div class="f2">
+            <ul>
+                <li ><a href="">HOME</a></li>
+                <li ><a href="">HOTEL</a></li>
+                <li ><a href="resturant.html">RESTURANT</a></li>
+                <li ><a href="hospital.html">HOSPITAL</a></li>
+                <li ><a href="cafe1.html">CAFE</a></li>
+            </ul>
+        </div>
+        <div class="f2">
+            <ul>
+                <li ><a href="cafe1.html">CONTACT</a></li>
+                <li ><a href="hote.html">FEEDBACK</a></li>
+                <li ><a href="resturant.html">ABOUT US</a></li>
+               
+            </ul>
+        </div>
+        <div class="social">
+            <a href="#" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>                   
+            <a href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>              
+            <a href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="color: black;"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+             <div class="p1">
+                <hr style="color: #000000;width: 100px;height: 20px;">
+                <p style="color: #000000;">COPYRIGHT  &copy; 2024 MY REVIEW-ALL RIGHTS RESERVED</p>
+             </div>
+    </section>
+</footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+<title>Document</title>
+
+    <style>
+        
+   
+  
+       .box{
+        width: 100%;
+            height: 2rem;
+          
+            background-size: cover;
+            background-position: center;
+   
+          
+       }
+       .logo{
+           position: absolute;
+           top: 10px;
+        
+           left: 50px;
+       }
+       .name h1{
+           flex: 1;
+           margin: 40px 60px;
+           display: flex;
+       }
+       Copy code
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: auto; /* Changed height to auto for responsiveness */
+ 
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right; /* Center align the navigation links */
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:black;
+  position: relative;
+  padding: 10px;
+}
+
+nav ul li a::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: orangered;
+  transition: height 0.5s;
+}
+
+nav ul li a:hover::before {
+    height: 85px;
+
+
+}
+
+.img {
+  text-align: center; /* Center align the image */
+}
+
+.tex {
+  text-align: center; /* Center align the text */
+}
+
+.action__btns {
+  display: flex;
+  justify-content: center; /* Center align the buttons */
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.action__btns button {
+  font-size: 13px;
+  font-weight: 500;
+  height: 35px;
+  letter-spacing: 2px;
+  padding: 0 20px; /* Adjusted padding for better spacing */
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #f8fafc;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .tex h1 {
+    font-size: 20px; /* Decreased font size for smaller screens */
+    bottom: -100px; /* Adjusted position for smaller screens */
+  }
+
+}
+@media screen and (width< 1200px)
+{
+    .containeer{
+        gap: 3rem;
+    }
+}
+@media(width <900px){
+    .containeer{
+        grid-template-columns: repeat(1,1fr);
+    }
+  .containeer_right{
+    grid-template-columns: repeat(2,1fr);
+  }  
+  
+}
+@media(width <750px){
+    .containeer_righ{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+   
+
+   body{
+    min-height: 100vh;
+ 
+}
+    
+        footer{
+            background-color: #000000;
+            color: white;
+        }
+       
+        .c2{
+            width: 100%;
+            padding: 0%;
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+           padding: 2px;
+            
+        }
+       .co1 header.ti{
+        font-family: cursive;
+        padding: 90px 110px 10px 20px ;
+       }
+     .co1 .co2 .box1{
+        position: relative;
+        padding: 10px;
+
+     }
+     .box1 #email{
+        border-radius: 12px;
+        height: 30px;
+        width: 200px;
+     }
+     .box1 button{
+        width: 120px;
+        padding: 2px;
+        margin: 12px;
+        font-family: cursive;
+        font-weight: bold;
+        border-radius: 10px;
+     }
+     .c2{
+        background-color:#4a5c6a;
+}
+.card{
+    font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containeer{
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+.containeer_left{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.containeer_right{
+    display: grid;
+    gap: 2rem;
+}
+.card{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #5f6467;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.card img{
+    max-width: 75px;
+    border-radius: 100%;
+}
+.card_content{
+    display: flex;
+    gap: 1rem;
+}
+.card_content span i{
+    font-size: 2rem;
+    color: wheat;
+}
+.card_details p{
+ font-style: italic;
+ color:white;
+ margin-top:4rem;
+ font-size: 25px;
+ 
+}
+
+.name H1{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+       
+
+
+
+
+       
+    </style>
+</style>
+</head>
+
+<body>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+              <H1>MY REVIEW</H1>
+            </div>
+            
+                <ul>
+                    <li ><a href="cafe1.html">HOME</a></li>
+                    <li ><a href="hote.html">HOTEL</a></li>
+                    <li ><a href="#">MALL</a></li>
+                    <li ><a href="resturant.html">RESTURANT</a></li>
+                    <li ><a href="hospital.html">HOSPITAL</a></li>
+                    <li ><a href="cafe1.html">CAFE</a></li>
+                     
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+  
+
+
+
+       
+</body>
+</html>

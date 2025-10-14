@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="captcha.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=
+"https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="captcha.js"></script>
+    <style>
+
+        .box{
+            width: 100%;
+                height: 2rem;
+                background-size: cover;
+                background-position: center;
+       
+              
+           }
+           
+           .name h1{
+             font-size: 20px;
+               margin: 40px 60px;
+               
+           }
+           Copy code
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    .box {
+      width: 100%;
+      height: auto; /* Changed height to auto for responsiveness */
+     
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav ul li button{
+        width: 90px;
+        height: 30px;
+        border-radius: 6px;
+        background-color: orangered;
+        
+    }
+    nav ul li button a{
+        color: white;
+    }
+    
+    nav ul {
+      flex: 1;
+      text-align: right; /* Center align the navigation links */
+    }
+    
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px;
+      margin-left: 50px;
+      font-size: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color:black;
+      position: relative;
+      padding: 10px;
+
+    }
+    
+    nav ul li  .aa::before {
+      content: '';
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: -5px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background: orangered;
+      transition: height 0.5s;
+    }
+    
+    nav ul li a:hover::before {
+        height: 85px;
+    
+    
+    }
+    
+
+    
+   
+  
+    .name H1{
+        font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+        #image{
+            margin-top: 10px;
+            
+            width: 60px;;
+            padding: 20px;
+            font-weight: 400;
+            padding-bottom: 0px;
+            height: 40px;
+            user-select: none;
+            text-decoration:line-through;
+            font-style: italic;
+            font-size: x-large;
+           
+            margin-left: 10px;
+            
+        }
+        #user-input{
+            
+            width:auto;
+            margin-right: 10px;
+
+            padding-bottom: 0px;
+            height: 40px;
+            
+        }
+        input{
+            border:1px black solid;
+        }
+        .inline{
+            display:inline-block;
+        }
+        #btn{
+           
+           
+            margin: 10px;
+            
+        }
+        
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          body {
+            margin: 0;
+            font-family: "Trirong", serif;
+          }
+          
+        
+        .container{
+            width: 100%;
+            padding: 35px 10%;
+        }
+        main.row{
+           display: flex;
+           flex-wrap: wrap;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+        }
+        .contents .box p{
+            margin-top: 100px;
+            font-size: 29px;
+        }
+        .col header.title{
+           
+            padding: 0px 0px 10px 20px;
+        }
+        .col .contents{
+            padding: 0px 30px;
+           
+        }
+        .col .contents .box{
+            position: relative;
+            padding: 5px;
+            
+            
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: all 0.4s;
+          
+           
+        }
+        .bor{
+            border-bottom: 2px solid orangered;
+        }
+       
+        @media(max-width: 768px){
+            main.row{
+                display: flex;
+                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr;
+
+            }
+            .row .col:nth-child(2){
+margin-top: 30px;
+            }
+            
+
+        }
+        .container{
+            width: 100%;
+            padding: 35px 10%;
+        }
+        .container{
+            padding-right: calc(10% - 30px);
+        }
+
+        .c2{
+            width: 100%;
+            padding: 0%;
+        }
+      
+         @media(max-width:768px){
+            body{
+                width: 390px;
+            }
+            
+         }
+         .co1 header.ti{
+         
+            padding: 20px 0px 10px 20px;
+           }
+     .co1 .co2 .box1{
+        position: relative;
+        padding: 10px;
+
+     }
+     .box1 #email{
+        border-radius: 12px;
+        height: 30px;
+        width: 200px;
+     }
+     .box1 button{
+        width: 120px;
+        padding: 2px;
+        margin: 12px;
+       
+        font-weight: bold;
+        border-radius: 10px;
+     }
+     .c2{
+        background-color: black;
+     }
+     #email,::placeholder{
+        
+        font-size: 22px;
+     }
+     #email{
+         height: 32px;
+         border-radius: 6px;
+         width: 320px;
+     }
+     @media(max-width:768px){
+        #email{
+            width: 270px;
+        }
+       
+     }
+    
+     #name{
+        height: 32px;
+        border-radius: 6px;
+        width: 320px;
+    }
+    @media(max-width:768px){
+        #name{
+            width: 270px;
+        }
+     }
+    #number{
+        height: 32px;
+        border-radius: 6px;
+        width: 30px;
+    }
+    
+    #password,#submit{
+        height: 32px;
+        border-radius: 6px;
+        width: 320px;
+    }
+    #btn{
+        height: 32px;
+        border-radius: 6px;
+        width: 100px;
+    }
+    @media(max-width:768px){
+        #password,#submit{
+            width: 270px;
+        }
+     }
+    form{
+        background-color: whitesmoke;
+        width: 390px;
+        padding: 22px;
+        box-shadow: 4px 4px 4px 5px gray;
+    }
+    @media(max-width:768px){
+        form{
+            background-color: whitesmoke;
+            width: 310px;
+            padding: 12px;
+        } 
+    }
+    #btn {
+        background-color: orangered;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+              <h1>MY REVIEW</h1>
+            </div>
+            
+                <ul>
+                   <li><a class="aa" href="homegalary.html">GALLERY</a></li>
+                   <li><a class="aa" href="contectus.html">CONTACT US</a></li>
+                   <li><a class="aa" href="aboutus.html">ABOUT US</a></li> 
+                   <li><button><a href="sinup.html">Sign Up</a></button></li> 
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+  </header>
+        <main>
+            <div class="container">
+                <main class="row">
+                    <section class="col">
+                        <div class="contents">
+                           <form onload="generate()" action="login.php" method="post">
+                            <h2>Login</h2>
+                            <div class="box">
+                               <input type="email" id="email" placeholder="Enter E-mail">
+                                
+                            </div>
+                            <div class="box">
+                                <input type="password" id="password" placeholder="Enter Password">
+                                 
+                             </div>
+                           <div class="box">
+                            <div id="user-input" class="inline">
+                                <input type="text"
+                                       id="submit"
+                                       placeholder="Captcha code" />
+                            </div>
+                        
+                            <div class="inline" onclick="generate()">
+                                
+                                <i class="fas fa-sync"></i>
+                            </div>
+                         
+                            <div id="image"
+                                 class="inline"
+                                 selectable="False">
+                            </div>
+                            <br><br>
+                            <input  type="submit"
+                                   id="btn"
+                                   onclick="printmsg()" />
+                           </div>
+                           
+                        </div>
+                    </form>
+                    </section>
+
+
+
+                    <section class="col">
+                        
+                        <div class="contents">
+                            <div class="box">
+                              <p>"Looking for the best places to eat or stay?"
+                                Look no further than our review website! We're your one-stop destination for honest, user-friendly reviews that help you make informed decisions.</p>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </main>
+       
+            
+
+    
+</body>
+</html>

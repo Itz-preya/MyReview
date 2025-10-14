@@ -1,0 +1,608 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="style.css">
+
+  
+   <script src="1.js" defer></script>
+<title>Document</title>
+
+    <style>
+        
+   
+  
+       .box{
+        width: 100%;
+            height: 2rem;
+          
+            background-size: cover;
+            background-position: center;
+   
+          
+       }
+       .logo{
+           position: absolute;
+           top: 10px;
+        
+           left: 50px;
+       }
+       .name h1{
+           flex: 1;
+           margin: 40px 60px;
+           display: flex;
+       }
+       Copy code
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: auto; /* Changed height to auto for responsiveness */
+ 
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right; /* Center align the navigation links */
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:black;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav ul li a::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: orangered;
+  transition: height 0.5s;
+}
+
+nav ul li a:hover::before {
+    height: 85px;
+
+
+}
+
+.img {
+  text-align: center; /* Center align the image */
+}
+
+.tex {
+  text-align: center; /* Center align the text */
+}
+
+.action__btns {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.action__btns button {
+  font-size: 13px;
+  font-weight: 500;
+  height: 35px;
+  letter-spacing: 2px;
+  padding: 0 20px; 
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #f8fafc;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tex h1 {
+    font-size: 20px; 
+    bottom: -100px; 
+  }
+
+}
+@media screen and (width< 1200px)
+{
+    .containeer{
+        gap: 3rem;
+    }
+}
+@media(width <900px){
+    .containeer{
+        grid-template-columns: repeat(1,1fr);
+    }
+  .containeer_right{
+    grid-template-columns: repeat(1,1fr);
+  }  
+  
+}
+@media(width <750px){
+    .containeer_righ{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+   
+
+   body{
+    min-height: 100vh;
+ 
+}
+    
+        footer{
+            background-color: #000000;
+            color: white;
+        }
+       
+        .c2{
+            width: 100%;
+            padding: 0%;
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+           padding: 2px;
+            
+        }
+       .co1 header.ti{
+        font-family: cursive;
+        padding: 90px 110px 10px 20px ;
+       }
+     .co1 .co2 .box1{
+        position: relative;
+        padding: 10px;
+
+     }
+     .box1 #email{
+        border-radius: 12px;
+        height: 30px;
+        width: 200px;
+     }
+     .box1 button{
+        width: 120px;
+        padding: 2px;
+        margin: 12px;
+        font-family: cursive;
+        font-weight: bold;
+        border-radius: 10px;
+     }
+     .c2{
+        background-color:#4a5c6a;
+}
+.card{
+    font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containeer{
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10rem;
+}
+.containeer_left{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.containeer_left p{
+    font-size: 20px;
+}
+.containeer_left h1{
+    font-size: 50px;
+}
+
+.containeer_right{
+    display: grid;
+    gap: 2rem;
+}
+.card{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #5f6467;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.card img{
+    max-width: 75px;
+    border-radius: 100%;
+}
+.card_content{
+    display: flex;
+    gap: 1rem;
+}
+.card_content span i{
+    font-size: 2rem;
+    color: wheat;
+}
+.card_details p{
+ font-style: italic;
+ color:white;
+ margin-top:4rem;
+ font-size: 25px;
+ 
+}
+.card_details h4
+{
+text-align: right;
+font-size: 1rem;
+font-weight: 500;
+}       
+span{
+    color: rgb(255, 81, 0);
+}
+.name H1{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.ri-double-quotes-l {
+    margin: -20px ;
+    margin-top: 20px;
+ color: aliceblue;
+}
+#image{
+            margin-top: 10px;
+            background-color: rgb(245, 242, 239);
+            width: 60px;;
+            padding: 20px;
+            font-weight: 400;
+            padding-bottom: 0px;
+            height: 40px;
+            user-select: none;
+            text-decoration:line-through;
+            font-style: italic;
+            font-size: x-large;
+            
+            margin-left: 10px;
+             
+        }
+        #user-input{
+           
+            width:auto;
+               margin-right: 10px;
+            padding: 10px;
+            padding-bottom: 0px;
+            height: 40px;
+               
+        }
+        input{
+            border:1px black solid;
+        }
+        .inline{
+            display:inline-block;
+        }
+        #btn{
+           
+          
+            margin: 10px;
+            
+        }
+
+
+
+         form{
+            background-color: rgb(206, 201, 201);
+            height: 300px;
+            width: 300px;
+            padding: 33px;
+            box-shadow: 7px 7px 7px 7px gray;
+         }
+         #name{
+            height: 33px;
+            width: 200px;
+            border-radius: 7px;
+         }
+         #submit{
+            height: 33px;
+            width: 200px;
+            border-radius: 7px;
+         }
+         #btn{
+            height: 33px;
+            width: 100px;
+            border-radius: 7px;
+            font-weight: bold;
+         }
+         .row{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 33px;
+         }
+         .row{
+            margin-left: 500px;
+            margin-top: 8%;
+         }
+         footer{
+            background-color: #000000;
+            color: white;
+        }
+       
+        .c2{
+            width: 100%;
+            padding: 0%;
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+           padding: 2px;
+            
+        }
+       .co1 header.ti{
+        font-family: cursive;
+        padding: 50px 110px 10px 20px ;
+       }
+     .co1 .co2 .box1{
+        position: relative;
+        padding: 10px;
+
+     }
+     .co1 .co2 ul li a{
+        font-size: 20px;
+     }
+     .box1 #email{
+        border-radius: 12px;
+        height: 30px;
+        width: 200px;
+     }
+     .box1 button{
+        width: 120px;
+        padding: 2px;
+        margin: 12px;
+        font-family: cursive;
+        font-weight: bold;
+        border-radius: 10px;
+     }
+     .c2{
+        background-color: black;
+     }
+     .social{
+        color: #678eb5; 
+         display: inline-block; 
+         position: absolute;
+         font-size: 30px;
+           
+    }
+    .social a{
+        color: rgba(240, 235, 240, 0.8)
+        
+    }
+    footer .box1 ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    .border{
+        border-bottom: 2px solid white;
+    }
+     @media(max-width:768px){
+        body{
+            width: 390px;
+
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr ;
+           padding: 2px;
+
+}}
+    </style>
+</style>
+</head>
+
+<body>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+              <H1>MY REVIEW</H1>
+            </div>
+            
+                <ul>
+                    <li ><a href="final.html">HOME</a></li>
+                    <li ><a href="hotel.html">HOTEL</a></li>
+                    <li ><a href="#">MALL</a></li>
+                    <li ><a href="resturant.html">RESTURANT</a></li>
+                    <li ><a href="">HOSPITAL</a></li>
+                    <li ><a href="cafe.html">CAFE</a></li>
+                     
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+   <main>
+    <div class="containeer">
+        <div class="containeer_left">
+         <h1><span>R</span>ead <span>W</span>hat <span>O</span>ur <span>C</span>oustomer <span>L</span>ove <span>A</span>bout <span>U</span>s</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error natus, illum dolorem similique sapiente doloribus dolore minima voluptatibus cupiditate impedit voluptatum nostrum maxime tempora, repudiandae a distinctio enim quos aperiam!</p>
+        
+           
+            
+        </div>
+        <div class="containeer_right">
+            <div class="card">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAtwMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgMEAAECB//EADgQAAIBAwIFAgQDBwUAAwAAAAECAwAEEQUhBhIxQVETIhRhcYEykbEjQlKhwdHwFSQz4fEHFkP/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAlEQACAgICAQMFAQAAAAAAAAAAAQIRAyESMUEEMlETIiNCcWH/2gAMAwEAAhEDEQA/AFQ258VwYD4o56C+K5NsvivE4HsWBkQp2qDVBm3wfBpjgsldsYFTto0c4XmAwOtej6fUTzvUe8RNHiCvtUevMY7hXXqDTNqOmQWdwPSpa4iX9oPrVuyCBjapKwIYUPDF5Sxrtxuaji/HRSSCMGlXy28YB2otb3gkOeY4pSIyR2+lF7a3xb8wY1LK+JbHDkNHxCmHAbJpL1Z8XpatQ3s3rspY4FR3WZZlJNGCfkSdeCIsZCOXaiVkrsnWqQj9P8Qq3ZThHxT3RJotzqViOaHRMBz0Tum5oyaFwjmLUWxkVZl/ag/OrcLcihsd6yZFGM9a4RhnB6Ub0AsXU6yR4I3qnazejOoXvU82GHt61uC0EjB+4oIDLkzdG71ozlVIkXb+KuZtmRD1yKLXenINOMnfGaawi68sIfOAR8utZU2i2kc9w6y7481lbkFRbPSyhXJYdDitbVWubr3FN/c2TVOa4YL7Sc15f06PSWS2FvV9PdavZZrZmU74pft5SyEv/FRSW+FtabeK68KqJxZ3cwDdCdrljJkjO1AeI194z5ppN9FdLgYzilziNQGH1qyIgKKxM4Lc2BVEx+nOVznFEPipIFYJjB/lQ8MXmLN1NLj5W7KyqtBLT9Nmv51jh+5NN1vwdem05/ikVB1JB2rXBPoRxCT2FgMsCa74g4lbUG+EVuS1Q/hX/wDT6/KvPyzz5M/CGkjuxLFjx8n2CdM4caW5kClJQrYLg+37eaO22i6LLci3acesFztt+VVNN1T0Ciq+BnZEond2h1FfiYCY7iMFlbpzEdq7laORpNgjiXhV4YvUtT06AjqKULW2kMpUkgqdwa9U0u7NxbAEiQHaRcdDQLiLSxFzXtkq4P8AyADH0NFT8CSx6tC9MpWHBOdqH234mq+4k9N/VGDQ0Eo55etU8E0Zcq/qg9q0kLNuKI6ZGtzI6ynBwCK4uQLS55V6GgK3sijgxnmHajNhY/7b1MjAXJoQ03OxAG+KJ2N4fh2jI7YoIy7Bd42LgEedqMXl0/8ApZXPagl6f2w+tFbqFv8ATub5UzVlIyoF6Rj1HJJzjrWqn0W0e4eT0+wFZR4IKy0qGq5guVO6MN/NUZVnU55T+dPV7LayMQqqcdaFzXFojbhAR86msSN9b4AemLNJsykb1fvQ3w/KwxvRrSLm0kzgp181zrggaA8hBp4xrRKTvYk2oKXON9zXPEi7j7VcRF+JUCoOJxhfyrJBFG5kwxFV4fc9dXP/ADN9ay2XMgArJUOGLKT0IWkbYYOKGNcSNLscknep9Vl9Mpbqcco92PNTcP2Hx12inYE7n5UnWx1vQa4a02e6YYQ8p7nNek8M8LTeuJLksEHnvXGhwJZxosMYHLTna3fsGSopI7ey8ocUKnEHBk9o8l5okzRyHJKA7H86WLK9lkuHtNTQJOQVJ5Rhx8+2f1r19WEiYyGHivL/AP5O0+LT7221BP2aOeRwvc9aMo/Av9FHWrP0jKIs8wP4CcEfTyKXVAMmSCRTfeOLyGKcMHSRB717HscfP9QaWZomhuJFcHzsKMZao55KmRyTCPePaq4Jdi5O/wA63cOhXlB3+lcQIeUmmJNEuMjNW4HIXeqfIT8qsxbACgBqitef8ooxFcCXSCCRkqRQ24iy4NRvK8MfIOnaqLY66C3CsixPMreBW6E2U5gYuDgmspjUO4S6JJKZz5NL+vwzxnm5Tv4r0xIbQ+1QpOKoX8ViWxIq5FLxflgv/BJ4aaVM5Vly2+RTDe83wxbvRGGOzK4jVc1HqMA+FbesnH5A4y+BTsZDJd79R2qTilcR5qKwTGoNjzVrilDyYFFG8nn9zn12+tTWOELSSfhUb/0qe7tgJSQKjlQxwqpGC2SR5pWyqWytI0k8jMRkscmmrhZWij541DOMnc0t27qjMT0IIz4pv4MheGVBOAUlXmX6VPI9UWgthheJJ1lSBLmIyjYLFbkgfU5pl0jVry6JRgC/LnKA4IrdnwtZSzeuGVFB5vwDIPyNFdBhtodeWCEAxKhUYFLWtF9inf65eLepGz3cgY/hRiiL9SB86KcUQG44Mtri6jmiZLlGjWfJKnB657U3XOk6O17m4ysygEjnK5FUP/kyaC24PmkEfqKkiBVHQE7A/SmrQjdnldja3VvDM6JHNbmXPIu3KD127YO9VdUEEUUfwN0JkaPLJKMujfLH/lWuHpnQFGyUfIx1yPI+Y64qtPY4vd1VUY+8AklT8vkaWPZHItALlU/iyfvXcGFJGNqvatBHA6CPGCd6gYIyjl61WjlNMFxkVyh92K75PbWRKM70jRmdvjK5qSfTjLEr9jvUFyMAN3FGLIyzWyhEyB5qmJWjJ6AjaexPKn3rdN9lYlzlkBJHasqqiHkG9NbmkYg5oZrV0sV4QcdKs8NM7yHmBqDXtMnlvuZI8jHWp/STiUeanohsLwSNhRRK+c/CNnxQbSYjDdFJAAQe1G75c2jYrQxJCzyyYo2fN/qB8ZohxOP2QPyFV7KL/eZ8GrvEkfNEgPgU9UTQmuA8u5xj3Zodcz+rNz4wnb6Ud1GCO2gkdlyeXHLnqaWZJGdizUjabLQTitlgQ5yDsOmf0o1wtcSxaiYpZGwU9nMdhg9qGWuZERSuQNiDtkVOwdSs9scyxkY8/WkfwVXyeovqVxHaF5FKRrs8g7CoLK+uI7qOeyvCFJ2yhI38HG9D+GuIYruNY58KWGHQ9vnTHpOmTI7NZzRopORl8CpJfJ1RlZ3qt091NAyPNLegYLmIgKPB8CqPHGoyQ8NpZXbhprmdQqg52Xcn9Kar6SHRdGnu9QljKKpZio/FXkmofG8VXk0wQI0HthDkgqOpUds9/wDyqwg5PRLJOkWdCZIyYyueUhlB/UVevoVbnVfbIuMA/vKen9qA6dKGCufZNCcNj8iDTRAIruPMgyYxjfup/sahLUwe6IlXKSzS+4HbyKgSNlkAI7+aem0SNjsQfqMUP1HSBbyxlQucjpXYsTqzhapi7cgx4HIQT8qlW0fCtykk+KdrfQluYkZhv1o5YcMRy4LfpReBivsTtI0GO8j/AGqkE460ct+H/QIWMZFMX/1qSBxJCxA8Ves4jCCJMHHcinjGlVBS0B7bSI0AJBBrKarX0pdgR9qyns1ClZtbKR6IG9A+JtfFhcBBEWLLVnSp1Z4lGxzQPjeAG8iblz7TSO0hVtlLS757u+aVhjfpTXNvZtSnoMBa4PKuNxThcwmOybPiliGQs2gAuScd6u6+oYIMZAG+KpW0qLckE4w25+VA9V4iOpkcuY4F/CoOCw8n+1FxsMXsj1orND7UZgT56UAjniWQKsCg/wAR3xU8spywjOzdVbcH7VTlXlCuAM75wNqmsTXZdzTDujwW15qRAYiNRhj3Y/2rLu1+FuZABylJGU4HT/reueHIJbqz9OAqpim52Y5B35cdPpTGmnXSam8nMsxYc78z4B7Fc9/GapGEZKiiX22LccTxXJBDZHcHcfOmbSdS1JCIxMGQjHMRviqk0FpNJ60E0qDPthYHmUeMYz2/pRHT7Bp2K25AO/OrHdcd8D5b1zZMMk9FISNcU3Fxd2CWZmeTJBfLbBaHaBJNGkkXKrGfdEzgpgkDHkbHr5poFiLeFmS2551jyCWHLLv3+W/ilyzs7tNRMsmUmkxy4XCjf8I+W9dHp6oacVYOtlc3s3OFEvquWA/e33o9ppIYbH3B1x5yKWLWO4dZo2A9WGU82/Qdzn6028Myi79MMoLKdye+Nx/WuPMqdgh1RU1PWbq2ZfTRnQpnmFDjrc07AzLuOwpg4m0lPSE1nlUOcj+E/wCGkwL6ZILEnO+BXTiyOUTlyRpjJY8T3HOI1Q4+tem8LXklzbiRl5cDvXjWmqpux1+9e38NQpb6IrnA9ud6upMi1sYbdhLD9qG3EShm5sb1PpU8bxHD96FcYXosLJpwR0PQ1jFywtVWP1MdfFZS7JxbbaZosU1wxBIA2rKxgPpGkTRzI7LsD3olrOi295yGY7gVJbamJnwq43rWrxyzxrySlcdhQf3diKkLkFjDZ3wSIDGd6ManvZNjxQ2G2aGbmfJPnNWLy5Jt2TGTQSo1nnetzvaxzMCQXJQY+dLatyuR8qYuMkaNrVWXAkZn/LA/rSvIcOM0y0PHo6aQ+op32NW1IW0LcmSc/rVBzvn8qM20Hqwemevp4H16j9KwWS8LXjWt1PGFzHKF58DJGD2/Om/iSSO402CayuR6kBVxGmxGdz9d/wBKRdFnjtdThlmiMiAENGOp8D86eylpLbubZUguQABbyNt7ug32zuelZQV2joxytUxR1CSa3mS5iuvUEzFnHLvFJ3/PzRywvkto09e4PqbYEKjJ/LJ/pXeoRxXK2/rKQJSqOF67b5H03ofc6ZG8AXTZ09e2fkJZSnMMnGenTak96LtfTD0GqXDTXVxMkiwQJlIyMGRj5+Qx/narZPcXl1KWzArbsw7cvT75xUQs72IJ8dfSLJGGM8Spjn6cuDjbO1WtSubfRuHLhrEsPiwVj9RsuM7dcnfG9NHHxV0JObYtpcXS3Aaa4kkjYZOXLAgnr/P+VFNIMtjfgwNhc5Cn94UCt5jMkbSHK8nJgDGMYH+fQ1eM0sEign25wGHb/P6Vx5omgz0OZorq0wGCrJ8+h815/q1vJb3TK6An+IDY/L602afMl7YsEAEqKNicAj70B4jBW8KSt0GQy7g0np3To2dasp6OD8TuMZ8GvQ7riL0NOFnAx5iABXnukL/uVXGGZhRu7gENyjOxrvRxMsy8T3emn2SnrnGan1zX5tT0LmlJOVFArqzF1Pk7ii8dkp0sQkfujatZqKerRxXOnxRuxOCNvtWVYlsRJjfasrWGg5aMY3BA2ozFMJFGapyy2tuPcw2FCrriCCFsRb/StpEkmxhlSIbvih9/cWUUeeYFqVrrXLm4JCkqKpYmmOZHJzQckhlBgzju8W7vLQJjEcbfzI/tSvKOYbDJFENfkD6nIi9IwEqirDlxTrY6VEGCRnB267Uet35ViwcZU/UdKDGeQDkDkKeo81b9cKIAOoB+1J5CzidxbagJQv4JFk5fpg4r0GSR/iotRu4klkdALeNBgcvUEn7151eNz3OexUA/lXo/Cl9/qWiQepCOa0Kxc+Ackfp/3Szk0tM6PT6l1Z0dNZbudWKIkwVyu+2cnbfbFVLq4Fnfssvp7Fs82PflfHXuD9q1rkuoQ32Y2Z2kxuE326Y+9V5YIxqNmNeaMNcR8scxfIXB6Me3X+VOk4py7RSTUXsIcS67YxXTiNsLLComAXmUN8u+dhSVqd2L6cMsYjiUYRR1x5NFOOZYBPHZWOGjjQPI6jrnpvQLoBTQbaOfLk5OkXtKtkuNOvzzkT25WWNQeo3BrSXKzwBZMe3Ynx8/88VDpLrHqcZdOdXyvKDjJ7fzwPvUMwNrfOvVDnbtjNRyxvY+NpxHfh0lU9GU+3lwGU74rjXrFCwkMmdj7ub+lUNHvZbONFVVli7Bwcr96bIbaLUYBNIkYDjsx/zvXDBuMy00nETNFwLtOU5AYdPrTPe2huZY33wDV610W3gYlEA8Yq8bcAYr0E9HFQLjtVUDbfzVtEAQLjtipjCB5rOTArGIhCtaqRgQNhWVgie8090cs5P3rtLYdWqT2qPaMVWu5nVfYN6nbYaoss0US7kCqyXsbOcHIXdj8qEzQ3FznmYgGopYzZWNwc7lOUZ8mjWwgSaVp5HlbrIxY/euVUisG1YTtVhDh+u1dSP71x+6MVGBkk+N61mpt7CTMefPypm4N1SS2iubOMgPLh4/BboR/IfzpXGVfcYIFTWM5tbtJlP4T+Y702vI0HUrPSZ79ptNS6Mai8il9sQU7jIzv9DtQ++u0vIjetac8VuolMLHl5kBw247kdD2opdala3WjvOskLXSxkrGsnRR0bH2pb1O+M8JhjKRTzRn2c3KWUjzVIy/G9UPlS592ccZpHIIp7WWVoWQcvqvvjGw+Y/vQE/hqO6NwkBjueYlGUD3ZAAB222/8rtfwZ7YFCLsg0Rgtsy/iByp8GmHVYIr60tdTtkCll5HQDGWH+H8qXGbejGk+tNZHnn9O3ic8u+N++PPWhOPLopilWmXLaSVFBj/AHcZU9MGnTQLqO5tpQgx6MvIfmcA5pJhm57O5nkUZQcrJn8S7N184z+VFuBnZTewc/NgqwbyN96ivT0+THyZf1HYNgVw0zg4AyKgBbzXQc96aiVllAWGWqRUHiqys3mu2dlGx3NajWbnTasrjJwOY71lGgWJDMa5bcZNarKmhzk0K4jPLYpj96QA/kaysp12Bi+K23StVlUEOFAORjqRvWTKElZR0BrKypMc3IffnzW/3lrKymXQGN3C07zGSzkwYo48LtvuSDv9KH6+oZLeUj3/AA4Ga3WV1tfhIN/lKMfEOpxR+ibgSQgY9ORFYED6ijunW1tq1ncPPbRRsbcyAwLycpweny2rdZXJDstIUh5opCSNJjPXl5mAPTPN/wBVusq0e2B9r+hOyVWW7HKAskaMQBgZYYP8jVrgKRmunBPW2BP2cj+lZWUZ+1C/tIeFFbxWVlRGJEFYnukwaysoGJmjUnet1lZWMf/Z" alt="user">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l">vrunda</i>
+                    <div class="card_details">
+                        <br>
+                         <p>Today I Have Bussiness Meeting So I Want A Good Cafe This Website Is Very Helpfull It Show True And Right Reviews.</p>
+                         <h4></h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyXS4FmsQly5AGl317qroUlqPE2_-7QFirLA&usqp=CAU" alt="user">
+                <div class="card_content">
+                   <i class="ri-double-quotes-l">HEET</i>
+                    <div class="card_details">
+                        
+                         <p>This Website Has Simplified My Life By Providing Trustworthy Information Right At My Fingertips. </p>
+                         <h4>~fsngsjkgn</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="user">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l">BHAVYA</i>
+                    <div class="card_details">
+                         <p>Whether it's restaurants, gadgets, or hotels, this website has become my go-to source for reliable reviews</p>
+                         <h4>~fsngsjkgn</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="user">
+                <div class="card_content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card_details">
+                         <p>opurtunitys doesn't heppans ,you creat them. </p>
+                         <h4>~fsngsjkgn</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="user">
+                <div class="card_content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card_details">
+                         <p>opurtunitys doesn't heppans ,you creat them. </p>
+                         <h4>~fsngsjkgn</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="user">
+                <div class="card_content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card_details">
+                         <p>opurtunitys doesn't heppans ,you creat them. </p>
+                         <h4>~fsngsjkgn</h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </main>
+    <footer>
+        <div class="c2">
+            <div class="r1">
+                <section class="co1">
+                    <header class="ti">
+                        <h2>GET IN TOUCH</h2>
+                    </header>
+                    <div class="co2">
+                        <div class="box1">
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <button type="submit">SUBSCRIBE</button>
+                           
+                        </div>
+                    </div>
+                </section>
+                <section class="co1">
+                    <div class="co2">
+                        <div class="box1">
+                            <ul>
+                                <li><a href="1st.html">about me</a></li>
+                                <li><a href="1st.html">feedback</a></li>
+                                <li><a href="1st.html">contact</a></li>
+                                <li><a href="1st.html">achivements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="co1">
+                    <div class="co2">
+                        <div class="box1">
+                            <ul>
+                                <li><a href="1st.html">company</a></li>
+                                <li><a href="1st.html">academics</a></li>
+                                <li><a href="1st.html">start-up</a></li>
+                                <li><a href="1st.html">slogan</a></li>
+                                <li><a href="1st.html">hobby</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="co1">
+                    
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>                   
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>              
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div> 
+                    <br><br>
+                    <div class="border"></div>
+                    <br>
+                   <p>COPYRIGHT  &copy; 2024 TISHA GOYANI-ALL RIGHTS RESERVED</p>
+                </section>
+              
+                   
+            </div>
+        </div>
+        </footer>
+                
+
+
+    
+            
+        </body>
+        </html>
+</body>
+</html>

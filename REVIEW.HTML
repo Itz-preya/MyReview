@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="REVIEW.CSS">
+
+  
+    <script src="2.JS" defer></script>
+	<title>Form Reviews</title>
+</head>
+<body>
+
+	<div class="wrapper">
+		<h3>REVIEW:</h3>
+
+            <div class="inputbox">
+                <input type="text" name="n " required="required">
+                <span>FULL NAME</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="n2 " required="required">
+                <span>EMAIL</span>
+            </div>
+			<div class="rating">
+				<input type="number" name="n3" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="ENTER YOUR REVIEW..." name="n4"></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+  
+</body>
+</html>

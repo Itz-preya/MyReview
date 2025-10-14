@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href=
+  "https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity=
+  "sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+      
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          body {
+            margin: 0;
+            
+          }
+      
+         
+         
+        nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right; 
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:black;
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav ul li a::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: orangered;
+  transition: height 0.5s;
+}
+
+nav ul li a:hover::before {
+    height: 85px;
+
+
+}
+
+       
+    
+     @media(max-width:768px){
+        body{
+            width: 390px;
+
+        }
+        div.r1{
+            display: grid;
+            grid-template-columns: 1fr ;
+           padding: 2px;
+            
+        }
+        .topnav{
+            display: grid;
+            grid-template-columns: 1fr ;
+           padding: 2px;
+          }
+     }
+ .box{
+        width: 100%;
+            height: 2rem;
+          
+            background-size: cover;
+            background-position: center;
+   
+          
+       }
+       .logo{
+           position: absolute;
+           top: 10px;
+        
+           left: 50px;
+       }
+       .name h1{
+          
+           margin: 40px 60px;
+          font-size: 20px;
+       }
+       
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: auto; 
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right; 
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  margin-left: 50px;
+  font-size: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  
+  position: relative;
+  padding: 10px;
+  
+}
+
+nav ul li a::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: orangered;
+  transition: height 0.5s;
+}
+
+nav ul li a:hover::before {
+    height: 85px;
+}
+@media screen and (max-width: 768px) {
+  .tex h1 {
+    font-size: 20px; 
+    bottom: -100px; 
+  }
+
+}
+@media screen and (width< 1200px)
+{
+    .containeer{
+        gap: 3rem;
+    }
+}
+@media(width <900px){
+    .containeer{
+        grid-template-columns: repeat(1,1fr);
+    }
+  .containeer_right{
+    grid-template-columns: repeat(1,1fr);
+  }  
+  
+}
+@media(width <750px){
+    .containeer_righ{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+   
+
+   body{
+    min-height: 100vh;
+ 
+}
+
+.card{
+    font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.containeer{
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+.containeer_left{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.containeer_right{
+    display: grid;
+    gap: 2rem;
+}
+.card{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #5f6467;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.card img{
+    max-width: 75px;
+    border-radius: 100%;
+}
+.card_content{
+    display: flex;
+    gap: 1rem;
+}
+.card_content span i{
+    font-size: 2rem;
+    color: wheat;
+}
+.card_details p{
+ font-style: italic;
+ color:white;
+ margin-top:4rem;
+ font-size: 25px;
+ 
+}
+.card_details h4
+{
+text-align: right;
+font-size: 1rem;
+font-weight: 500;
+}       
+span{
+    color: rgb(255, 81, 0);
+}
+.name H1{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.ri-double-quotes-l {
+    margin: -20px ;
+    margin-top: 20px;
+ color: aliceblue;
+}
+footer{
+    background-color: rgb(226, 226, 226);
+    padding: 23px;
+    position: relative;
+   
+}
+#email1{
+    height: 30px;
+    width: 240px;
+    border-radius: 3px;
+}
+.f{
+    margin-top: 33px;
+}
+#b1{
+    height: 30px;
+    width: 100px;
+    border-radius: 3px;
+    background-color: orangered;
+    color: white;
+}
+.col{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+@media(max-width:768px){
+    .col{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 52px;
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+}
+.f2{
+    margin: 22px;
+    padding: 12px;
+   
+}
+.f2 ul li a{
+    text-decoration: none;
+    color:black;
+}
+.f2 ul li{
+    padding: 2px;
+}
+.social{
+    color: black; 
+     display: inline-block; 
+     position: absolute;
+     font-size: 30px;
+top: 210px;
+      
+}
+.social a{
+    color:black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+             <h1>MY REVIEWS</h1>
+            </div>
+            
+                <ul>
+                    <li ><a href="gallary.html">HOME</a></li>
+                    <li ><a href="hotel.html">HOTEL</a></li>
+                    <li ><a href="resturant.html">RESTURANT</a></li>
+                    <li ><a href="hospital.html">HOSPITAL</a></li>
+                    <li ><a href="cafe.html">CAFE</a></li>
+                     
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+  <main>
+    <div class="containeer">
+        <div class="containeer_left">
+         <h1><span>R</span>ead <span>W</span>hat <span>O</span>ur <span>C</span>oustomer <span>L</span>ove <span>A</span>bout <span>U</span>s</h1>
+            <p>At MY REVIEW, we're passionate about helping you make informed decisions. Whether you're looking for the perfect restaurant, cafe,hotel, or hospital, our comprehensive reviews are here to guide you.</p>
+        
+           
+            
+        </div>
+        <div class="containeer_right">
+            <div class="card">
+                <img src="v3.jpg" alt="user" width="200px" height="50px">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l">vrunda</i>
+                    <div class="card_details">
+                        <br>
+                         <p>Today I Have Bussiness Meeting So I Want A Good Cafe This Website Is Very Helpfull It Show True And Right Reviews.</p>
+                         <h4>~vrunda</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="r.jpg" alt="user" width="200px" height="50px">
+                <div class="card_content">
+                   <i class="ri-double-quotes-l">RUTUL</i>
+                    <div class="card_details">
+                        
+                         <p>This Website Has Simplified My Life By Providing Trustworthy Information Right At My Fingertips. </p>
+                         <h4>~rutul</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="h2.jpg" alt="user" width="200px" height="50px">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l">HELLY</i>
+                    <div class="card_details">
+                         <p>Whether it's restaurants, gadgets, or hotels, this website has become my go-to source for reliable reviews</p>
+                         <h4>~helly</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c.jpg" alt="user"width="200px" height="50px">
+                <div class="card_content">
+                  <i class="ri-double-quotes-l"> CHARMY</i>
+                    <div class="card_details">
+                         <p>Exceptional care, skilled professionals, and a comforting environment make mahavir hospital a top choice for high-quality medical treatment.</p>
+                         <h4>~charmy</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="k1.jpg" alt="user" width="200px" height="50px">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l"> KRUSH</i>
+                    <div class="card_details">
+                         <p>
+                            Delightful ambiance, delectable cuisine, and friendly service make GATE TO GOA a must-visit destination for any food enthusiast.</p>
+                         <h4>~krush</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="r1.jpg" alt="user" width="200px" height="50px">
+                <div class="card_content">
+                    <i class="ri-double-quotes-l">RUDRA</i>
+                    <div class="card_details">
+                         <p>Impeccable service, luxurious amenities, and breathtaking views make MARRIOTT HOTEL the ultimate destination for a memorable stay.</p>
+                         <h4>~rudra</h4>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </main>
+  <footer>
+    <section class="col">
+        <div class="f">
+            <input type="text" name="email" id="email1" placeholder="Enter E-mail ">
+            <button id="b1">SUBSCRIBE</button>
+        </div>
+        <div class="f2">
+            <ul>
+                <li ><a href="">HOME</a></li>
+                <li ><a href="">HOTEL</a></li>
+                <li ><a href="resturant.html">RESTURANT</a></li>
+                <li ><a href="hospital.html">HOSPITAL</a></li>
+                <li ><a href="cafe1.html">CAFE</a></li>
+            </ul>
+        </div>
+        <div class="f2">
+            <ul>
+                <li ><a href="cafe1.html">CONTACT</a></li>
+                <li ><a href="hote.html">FEEDBACK</a></li>
+                <li ><a href="resturant.html">ABOUT US</a></li>
+               
+            </ul>
+        </div>
+        <div class="social">
+            <a href="#" style="color: black;"><i class="fa-brands fa-linkedin"></i></a>                   
+            <a href="#" style="color: black;"><i class="fa-brands fa-instagram"></i></a>              
+            <a href="#" style="color: black;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="color: black;"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+             <div class="p1">
+                <hr>
+                <p>COPYRIGHT  &copy; 2024 MY REVIEW-ALL RIGHTS RESERVED</p>
+             </div>
+    </section>
+</footer>
+
+</body>
+</html>
+
+        
+
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="captcha.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=
+"https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="captcha.js"></script>
+    <style>
+
+        .box{
+            width: 100%;
+                height: 2rem;
+              
+                background-size: cover;
+                background-position: center;
+       
+              
+           }
+           .logo{
+               position: absolute;
+               top: 10px;
+            
+               left: 50px;
+           }
+           .name h1{
+              
+               margin: 40px 60px;
+              
+               font-size: 20px;
+           }
+           Copy code
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    .box {
+      width: 100%;
+      height: auto; 
+     
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav ul li button{
+        width: 90px;
+        height: 30px;
+        border-radius: 6px;
+        background-color: orangered;
+        
+    }
+    nav ul li button a{
+        color: white;
+    }
+    
+    nav ul {
+      flex: 1;
+      text-align: right; 
+    }
+    
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px;
+      margin-left: 50px;
+      font-size: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color:black;
+      position: relative;
+      padding: 10px;
+    }
+    
+     .aa::before {
+      content: '';
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      bottom: -5px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background: orangered;
+      transition: height 0.5s;
+    }
+    
+    nav ul li a:hover::before {
+        height: 85px;
+    
+    
+    } .name H1{
+        font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+      
+       
+      
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          body {
+            margin: 0;
+            font-family: "Trirong", serif;
+          }
+          
+       
+    
+      
+         @media(max-width:768px){
+            body{
+                width: 390px;
+            }
+            
+         }
+        
+   
+
+
+   
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 33px;
+    margin-left: 173px;
+    margin-top: 80px;
+
+}
+.two img{
+    height: 300px;
+}
+.one p{
+    font-size: 22px;
+}
+.one button{
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+   width: 130px;
+   height: 32px;
+}
+@media(max-width:768px){
+    body{
+        width: 400px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 33px;
+        margin: 9px;
+}
+}
+    </style>
+</head>
+<body>
+  <header>
+    <div class="box">
+        <nav>
+           
+            <div class="name">
+              <h1>MY REVIEW</h1>
+            </div>
+            
+                <ul>
+                   <li><a class="aa" href="gallary.html">GALLERY</a></li>
+                   <li><a class="aa" href="contectus.html">CONTACT US</a></li>
+                   <li><a class="aa" href="aboutus.html">ABOUT US</a></li> 
+                   <li><button><a href="sinup.html">Sign Up</a></button></li> 
+                </ul>
+            
+        </nav>
+        </div>
+   </div>
+  </header>
+        
+<main>
+
+    <section class="row">
+        <div class="one">
+            <p>Welcome to MY REVIEWS<br>Who We Are:<br>At MY REVIEWS, we're passionate about our review application. Founded in 2024.<br>Our mission is to provide reviews to user.<br>In our website we are providing reviews of different places like cafe,hotels, restaurants and hospitals.<br> there is other facility like user can rate particular place they can read the reviews also write the reviews.
+            <br><br>
+            <button><a href="REVIEW.HTML" style="color:white;"> Our Website</a></button>
+            </p>
+        </div>
+        <div class="two">
+            <img src="https://st2.depositphotos.com/3591429/10566/i/450/depositphotos_105666254-stock-photo-business-people-at-meeting-and.jpg">
+        </div>
+    </section>
+</main>
+    
+</body>
+</html>
